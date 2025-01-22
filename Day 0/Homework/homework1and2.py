@@ -112,6 +112,38 @@ def hw2_try1(num, b): # works from 2 to 35 Position systems and converts all to 
 #     return sum(nums1 + nums2)
 # Failed. ???????????????
 
+def hw2_try2(num, b, target): # works from 2 to 35 Position systems and converts all to decimal
+    num = str(num)
+    nums1 = []
+    nums2 = []
+    if "." in num:
+        num = num.split(".")
+        part1 = num[0][::-1]
+        part2 = num[1]
+
+        for i in range(len(part1)):
+            nums1.append(int(converter[part1[i]]) * (b ** i))
+
+        for x in range(len(part2)):
+            nums2.append(int(converter[part2[x]]) * (1 / b ** (x+1)))
+
+        result = sum(nums1 + nums2)
+    else:
+        num = num[::-1]
+        for i in range(len(num)):
+            nums1.append(int(converter[num[i]]) * (b ** i))
+
+        result = sum(nums1)
+    
+    res = ""
+
+    while int(result) != 0:
+        res += str(int(result) % target)
+        result = str(int(result) // target)
+
+    return res[::-1]
+# ✔
+
 # ალგორითმი ნასწავლი და განხილულია homework.png'ში
 # test:
 print(hw2_try1(1001, 2)) # 9
@@ -122,6 +154,15 @@ print(hw2_try1(1011, 16)) # 4113
 print(hw2_try1("1FFF", 16)) # 8191
 print(hw2_try1("FFF", 16)) # 4095
 print(hw2_try1(520.3, 6)) # 192.5
+print()
+print(hw2_try2(1001, 2, 4)) # 9
+print(hw2_try2(1001, 4, 10)) # 65
+print(hw2_try2(520.3, 10, 10)) # 520.3
+print(hw2_try2(1001, 16, 10)) # 4097
+print(hw2_try2(1011, 16, 10)) # 4113
+print(hw2_try2("1FFF", 16, 10)) # 8191
+print(hw2_try2("FFF", 16, 10)) # 4095
+print(hw2_try2(520.3, 6, 10)) # 192.5
 
 # print(hw2_try2(1001, 2, 10)) # 9
 # print(hw2_try2(1001, 4, 12)) # 65

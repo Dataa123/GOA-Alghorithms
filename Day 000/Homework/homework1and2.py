@@ -7,6 +7,9 @@ def hw1_try2(a, b, c):
     return ((b + a % c) - a) // c if a % c != 0 or (a % c == 0 and b % c == 0) else ((b + a % c) - a) // c + 1
 
 def hw1_try2_easy_version(a, b, c):
+    if b > a:
+        a, b = b, a
+
     if a % c != 0 or (a % c == 0 and b % c == 0):
         return ((b + a % c) - a) // c
     else:

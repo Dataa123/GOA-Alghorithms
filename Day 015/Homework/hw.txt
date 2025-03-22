@@ -1,0 +1,64 @@
+3.1 Access
+
+Access means to have access to read or modify an object.
+
+3.2 Alignment
+
+Alignment refers to how data is arranged and accessed in memory. In many programming languages (especially C, C++, and low-level languages), certain types of variables must be stored at memory addresses that are multiples of a specific number of bytes.
+
+3.3 Argument
+
+An argument is the value you pass to a function or macro when you call it.
+
+3.4 Behavior
+
+The external appearance or action of a program — what it does when it runs.
+
+3.4.1 implementation-defined Behavior
+
+unspecified behavior where each implementation documents howthe choice is made
+
+3.4.2 locale-specific Behavior
+
+behavior that depends on local conventions of nationality,culture, and language that each implementation documents
+
+3.4.3 undefined Behavior
+
+behavior,upon use of a nonportable or erroneous program construct or of erroneous data, for which this International Standard imposes no requirements
+
+3.4.4 unspecified Behavior
+
+use of an unspecified value, or other behavior where this International Standard provides twoormore possibilities and imposes no further requirements on which is chosen in any instance
+
+3.5 Bit
+
+unit of data storage in the execution environment large enough to hold an object that may have one of two values
+
+3.6 Byte
+
+addressable unit of data storage large enough to hold anymember of the basic character set of the execution environment
+
+3.7 Character
+
+member of a set of elements used for the organization, control, or representation of data
+
+3.7.1 single-byte character
+
+bit representation that fits in a byte
+
+3.7.2 multibyte character
+
+sequence of one or more bytes representing a member of the extended character set of either the source or the execution environment
+
+3.7.3 wide character
+
+value representable by an object of type wchar_t, capable of representing any character in the current locale
+
+3.8 Constraint
+
+restriction, either syntactic or semantic, by which the exposition of language elements is to be interpreted
+
+3.9 Correctly rounded result
+
+representation in the result format that is nearest in value, subject to the current rounding mode, to what the result would be given unlimited range and precision
+

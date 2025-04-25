@@ -1,0 +1,5 @@
+7.21.2 Streams
+
+We have input and output streams, text stream, binary stream.
+
+Each stream has an orientation. after a strem is associated with an external file, but before any operations are perfomed on it.
